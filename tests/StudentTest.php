@@ -28,7 +28,7 @@ class StudentTest extends TestCase
                ->willReturn($mockStmt);
         
         $this->student = new Student($this->pdoMock);
-        $result = $this->student->add("Ivan", 14, "Roman", true, "mouth_6");
+        $result = $this->student->add($_ENV["DB_NAME"], $_ENV["DB_NUMBER"],$_ENV["DB_GENRE"],$_ENV["DB_BOOLCHECK"],$_ENV["DB_TIME"],);
         
     }
 }

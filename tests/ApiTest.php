@@ -8,7 +8,7 @@ class ApiTest extends TestCase
    public function testRequest()
    {
        $client = new Client([
-           'base_uri' => 'http://localhost:8080'
+           'base_uri' => $_ENV["DB_BASE_URL"]
        ]);
 
        $response = $client->get('/index.php');
